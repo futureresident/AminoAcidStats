@@ -1,0 +1,20 @@
+The data set I chose was the list of codons and their respective amino acids, as well as their 3-letter code and 1-letter code. Given that I am a science major and my background in biochemistry, I was naturally drawn to this data set and wanted to conduct some visualizations to have a new perspective on a subject that I have extensively studied. 
+
+COMMENT ON MY DATASET:
+For some odd reason, the specific data set that I chose had false information regarding some of the amino acids. Some of the amino acids were given the incorrect codons and one amino acid was missing from the list entirely. I have made the necessary corrections to the data set and included both the source and my edited version of the file. The data set was obtained from the Princeton real-world data sets that was linked in the assignment. Link: https://introcs.cs.princeton.edu/java/data/. The data set is under the title "amino_source.csv". My version of the data set is simply "amino.csv". 
+
+Visualization # 1:
+I chose to conduct this visualization to see the proportion of codons that code for the same amino acid in a cell. This gives us an idea of which amino acids are the most needed, since evolutionarily speaking, cells would naturally evolve more codons coding for the most important amino acids. My visualization showed that Serine, Arginine, and Leucine are tied for the most codons coding for them. This indicates that these amino acids must serve a crucial role in the structures of proteins, since they coded for by the most codons available. 
+
+Visualization # 2: 
+I chose to conduct this visualization to see the proportion of each base in the codons of amino acids. To my surprise, it turns out that each base is used equally across all codons to form all 20 amino acids plus the stop codons.
+
+Machine Learning # 1:
+The result of this machine learning algorithm, K-nearest neighbours, was disappointing, although rightfully so. The codons for the different amino acids have a specific structure to them. The codons that code for the same amino acid often have similar bases at the first two positions, and the third one is the one that changes. And so, partitioning the data to training and testing data subsets was challenging. After computing several different partitions, I have concluded that the way it is now provides the most accurate predictions by the classifier. The results indicate that the classifier is not very good at predicting amino acids from their codons. And the reason behind it is the fact that the partitioning of the data did not capture sufficient points from every amino acid in order to conduct an accurate prediction. In order to do this, I would have to manually go through every amino acid and take the majority of the codons coding for it as training data and the remainder becomes my testing data. 
+
+Machine Learning # 2:
+The result of this machine learning algorithm, Support Vector Classifier, were considerably better than KNN. The training accuracy especially was remarkably better. This result doesn’t surprise me because since the codons for the same amino acid will almost always be on the same 2d plane, with the difference happening in the third dimension depending on the codon. And so having vectors between the different labelled clusters should accurately distinguish new codons, which was the case here.
+
+
+
+
